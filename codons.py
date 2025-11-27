@@ -1,3 +1,4 @@
+from data import codon.txt as path
 def create_codon_dict(path):
     codon_to_amino_acid = {}
     with open(path, 'r') as f:
