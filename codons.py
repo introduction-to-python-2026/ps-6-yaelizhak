@@ -1,8 +1,10 @@
 def create_codon_dict(path):
-    row = rows[0]
     codon_to_amino_acid = {}
-    for row in rows:
+    with open(path, 'r') as f:
+    for row in f:
         cell = row.strip().split('\t')
+        if len(cells) < 3:
+                continue
         codon= cell[0]
         acid = cell[2]
         codon_to_amino_acid [codon] = acid
